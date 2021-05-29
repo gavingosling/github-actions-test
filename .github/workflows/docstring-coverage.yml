@@ -1,4 +1,4 @@
-name: Interrogate documentation
+name: Interrogate Documentation
 
 on: [push, pull_request]
 
