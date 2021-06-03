@@ -15,6 +15,7 @@ jobs:
       with:
         python-version: 3.8
 
+
     - name: Python Interrogate Check
       uses: gavingosling/python-interrogate-check@main
       with:
