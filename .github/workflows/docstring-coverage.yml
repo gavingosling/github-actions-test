@@ -23,7 +23,6 @@ jobs:
 
     - name: Commit files
       run: |
-        interrogate
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add badges/interrogate_badge.svg
