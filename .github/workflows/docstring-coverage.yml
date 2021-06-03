@@ -15,12 +15,12 @@ jobs:
       with:
         python-version: 3.8
 
-
     - name: Python Interrogate Check
       uses: gavingosling/python-interrogate-check@main
       with:
         path: '/'
         badge-location: 'badges/interrogate_badge.svg'
+        fail-under: 0
 
     - name: Commit files
       run: |
