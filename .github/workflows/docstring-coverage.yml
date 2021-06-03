@@ -18,7 +18,7 @@ jobs:
     - name: Python Interrogate Check
       uses: gavingosling/python-interrogate-check@main
       with:
-        path: 'calc.py'
+        path: '/'
         badge-location: 'badges/interrogate_badge.svg'
 
     - name: Commit files
