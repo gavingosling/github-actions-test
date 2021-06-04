@@ -91,3 +91,5 @@ Tabbed
 Tasklist
 Tilde
 CHANGELOG
+Traceback
+ZeroDivisionError
