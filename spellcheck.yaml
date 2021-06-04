@@ -16,3 +16,16 @@ matrix:
       ignores:
       - code
       - pre
+      
+- name: Python
+  sources:
+  - '**/*.py'
+  default_encoding: utf-8
+  aspell:
+    lang: en
+  dictionary:
+    wordlists:
+    - wordlist.txt
+    encoding: utf-8
+  pipeline:
+  - pyspelling.filters.python:
