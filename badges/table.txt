@@ -24,4 +24,3 @@
 |----------------------|-------------|------------|-------------|--------------|
 | TOTAL                |           9 |          2 |           7 |        77.8% |
 ---------------- RESULT: PASSED (minimum: 0.0%, actual: 77.8%) -----------------
-Generated badge to /github/workspace/badges/interrogate_badge.svg
