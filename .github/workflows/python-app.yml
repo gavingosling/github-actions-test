@@ -22,8 +22,17 @@ jobs:
         python-version: 3.9
     - name: Test with scalene
       run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
         pip install -U scalene
-        pip install numpy
-        scalene calc.py > results.txt
+        scalene --html --outfile results.html calc.py
+        git add results.html
+        git commit -m "add results.html"
+        
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
         
         
