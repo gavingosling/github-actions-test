@@ -2,13 +2,13 @@
 ------------------------------ Detailed Coverage -------------------------------
 | Name                                        |                         Status |
 |---------------------------------------------|--------------------------------|
-| calc.py (module)                            |                        COVERED |
-|   add (L5)                                  |                        COVERED |
-|   subtract (L15)                            |                        COVERED |
-|   multiply (L27)                            |                        COVERED |
-|   divide (L37)                              |                        COVERED |
-|   maximum (L52)                             |                        COVERED |
-|   minimum (L66)                             |                        COVERED |
+| calc.py (module)                            |                         MISSED |
+|   add (L6)                                  |                        COVERED |
+|   subtract (L16)                            |                        COVERED |
+|   multiply (L28)                            |                        COVERED |
+|   divide (L38)                              |                        COVERED |
+|   maximum (L53)                             |                        COVERED |
+|   minimum (L67)                             |                        COVERED |
 |---------------------------------------------|--------------------------------|
 | invalid.py (module)                         |                         MISSED |
 |---------------------------------------------|--------------------------------|
@@ -18,9 +18,9 @@
 ----------------------------------- Summary ------------------------------------
 | Name                 |       Total |       Miss |       Cover |       Cover% |
 |----------------------|-------------|------------|-------------|--------------|
-| calc.py              |           7 |          0 |           7 |         100% |
+| calc.py              |           7 |          1 |           6 |          86% |
 | invalid.py           |           1 |          1 |           0 |           0% |
 | valid.py             |           1 |          1 |           0 |           0% |
 |----------------------|-------------|------------|-------------|--------------|
-| TOTAL                |           9 |          2 |           7 |        77.8% |
----------------- RESULT: PASSED (minimum: 0.0%, actual: 77.8%) -----------------
+| TOTAL                |           9 |          3 |           6 |        66.7% |
+---------------- RESULT: PASSED (minimum: 0.0%, actual: 66.7%) -----------------
