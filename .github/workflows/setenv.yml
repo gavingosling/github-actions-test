@@ -27,6 +27,6 @@ jobs:
 
 
       - name: Set env
-        run: echo "GITHUB_SHA_SHORT=$(1)" >> $GITHUB_ENV
+        run: echo "GITHUB_SHA_SHORT=1" >> $GITHUB_ENV
       - name: Test
         run: echo $GITHUB_SHA_SHORT
