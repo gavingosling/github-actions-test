@@ -75,3 +75,9 @@ def minimum(a, b):
     """
 
     return a if a <= b else b
+
+for i in range(0,10000):
+    np.add(1,1)
+    np.subtract(1,1)
+    np.multiply(1,1)
+    np.divide(1,1)
