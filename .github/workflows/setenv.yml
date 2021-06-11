@@ -31,12 +31,12 @@ jobs:
       - name: Set Env 2 
         run: |
           git status > status.txt
-          if grep -q 'nothing to commit' status.txt
+          if grep -q 'asdasdas' status.txt
           then
-              echo 0
+              echo 1
               echo "GIT_STATUS=1" >> $GITHUB_ENV
           else
-              echo 1
+              echo 0
               echo "GIT_STATUS=0" >> $GITHUB_ENV
           fi
       - name: Test 2
