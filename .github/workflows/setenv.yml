@@ -39,6 +39,7 @@ jobs:
           else
               echo "GIT_STATUS=0" >> $GITHUB_ENV
           fi
+          echo 0
       - name: Test 2
         run: echo $GIT_STATUS
 
