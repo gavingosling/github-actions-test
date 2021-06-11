@@ -27,6 +27,18 @@ jobs:
 
 
       - name: Set env
-        run: echo "GITHUB_SHA_SHORT=1" >> $GITHUB_ENV
+        run: echo "STATUS=1" >> $GITHUB_ENV
       - name: Test
-        run: echo $GITHUB_SHA_SHORT
+        run: echo $STATUS
+      - name: Set Env 2 
+        run: |
+          git status > status.txt
+          if grep -Fq 'nothing to commit' status.txt
+          then
+              echo "GIT_STATUS=1" >> $GITHUB_ENV
+          else
+              echo "GIT_STATUS=0" >> $GITHUB_ENV
+          fi
+      - name: Test 2
+        run: echo $GIT_STATUS
+
