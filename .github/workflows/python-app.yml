@@ -23,6 +23,7 @@ jobs:
     - name: Test with scalene
       run: |
         pip install -U scalene
+        pip install numpy
         scalene calc.py > results.txt
         
         
