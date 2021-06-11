@@ -1,3 +1,4 @@
+import numpy as np
 """
 This is a simple calculation module. It contains addition, subtraction, maximum,, minimum, multiplication and divison.
 """
