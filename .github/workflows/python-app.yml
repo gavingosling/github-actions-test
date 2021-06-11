@@ -11,9 +11,7 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.9
@@ -26,6 +24,7 @@ jobs:
         git config --local user.name "GitHub Action"
         pip install -U scalene
         scalene --html --outfile results.html calc.py
+        mv 
         git add results.html
         git commit -m "add results.html"
         
