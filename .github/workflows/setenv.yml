@@ -30,9 +30,7 @@ jobs:
         run: echo $STATUS
       - name: Set Env 2 
         run: |
-          git status
           git status > status.txt
-          grep -Fq 'nothing to commit' status.txt
           if grep -Fq 'nothing to commit' status.txt
           then
               echo "GIT_STATUS=1" >> $GITHUB_ENV
