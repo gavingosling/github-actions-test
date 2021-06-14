@@ -32,7 +32,7 @@ jobs:
         run: |
           git status > status.txt
           cat status.txt
-          if grep -q 'nothing to commit, working tree clean' status.txt
+          if grep -q 'nothing' status.txt
           then
               echo 1
           else
