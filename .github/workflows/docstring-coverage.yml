@@ -1,6 +1,6 @@
 name: Interrogate Documentation
 
-on: [push, pull_request]
+on: pull_request
 
 jobs:
   build:
@@ -21,16 +21,12 @@ jobs:
         badge-location: 'badges/interrogate_badge.svg'
         fail-under: 0
 
-    - name: Commit files
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add badges/interrogate_badge.svg
-        git add badges/table.txt
-        git commit -m "Update interrogate_badge.svg" -a
+    - name: Set Env
+      run: echo "TABLE=$(cat badges/table.txt)" >> $GITHUB_ENV
 
-    - name: Push changes
-      if: success()
-      uses: ad-m/github-push-action@master
+    - name: Comment PR
+      if: ${{ github.event_name == 'pull_request' }}
+      uses: thollander/actions-comment-pull-request@master
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        message: 'Example of message !'
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
