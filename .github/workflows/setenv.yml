@@ -34,11 +34,7 @@ jobs:
           if grep -q 'asdasdas' status.txt
           then
               echo 1
-              echo "GIT_STATUS=1" >> $GITHUB_ENV
           else
               echo 0
-              echo "GIT_STATUS=0" >> $GITHUB_ENV
           fi
-      - name: Test 2
-        run: echo $GIT_STATUS
 
