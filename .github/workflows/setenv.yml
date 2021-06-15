@@ -36,6 +36,11 @@ jobs:
           git status > status.txt
           cat status.txt >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
-      - name: test
-        run: echo test
+      
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: status
+          path: status.txt
+
 
