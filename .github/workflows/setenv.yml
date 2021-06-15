@@ -41,6 +41,6 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: status
-          path: status.txt
+          path: status.txt status.txt
 
 
