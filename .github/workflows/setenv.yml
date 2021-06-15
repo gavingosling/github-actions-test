@@ -31,11 +31,6 @@ jobs:
       - name: Set Env 2 
         run: |
           git status > status.txt
-          cat status.txt
-          if grep -q 'nothing' status.txt
-          then
-              echo 1
-          else
-              echo 0
-          fi
+          echo "STATUS=$(cat status.txt)" >> $GITHUN_ENV
+          echo $STATUS
 
