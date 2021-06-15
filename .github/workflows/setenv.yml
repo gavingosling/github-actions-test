@@ -24,13 +24,18 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: Set env
-        run: echo "STATUS=1" >> $GITHUB_ENV
-      - name: Test
-        run: echo $STATUS
-      - name: Set Env 2 
+      - name: Set Env 1 
         run: |
+          echo 'JSON_RESPONSE<<EOF' >> $GITHUB_ENV
+          curl https://httpbin.org/json >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
+    
+      - name: Set Env 2
+        run: |
+          echo 'GIT_STATUS<<EOF' >> $GITHUB_ENV
           git status > status.txt
-          echo "GIT_STATUS=$(cat status.txt)" >> $GITHUB_ENV
-          echo $GIT_STATUS
+          cat status.txt >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
+      - name: test
+        run: echo test
 
