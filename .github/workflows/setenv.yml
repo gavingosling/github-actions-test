@@ -31,6 +31,6 @@ jobs:
       - name: Set Env 2 
         run: |
           git status > status.txt
-          echo "STATUS=$(cat status.txt)" >> $GITHUN_ENV
+          echo "STATUS=$(cat status.txt)" >> $GITHUB_ENV
           echo $STATUS
 
