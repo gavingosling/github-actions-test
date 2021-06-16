@@ -26,8 +26,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Branch name
         run: |
-          STR=branch-${GITHUB_REF##*/}
-          echo 'BRANCH=$(STR)' >> $GITHUB_ENV
+          STR="BRANCH=branch-${GITHUB_REF##*/}"
+          echo $STR >> $GITHUB_ENV
       - name: a
         run: echo a
 
