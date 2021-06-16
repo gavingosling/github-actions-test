@@ -24,23 +24,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: Set Env 1 
-        run: |
-          echo 'JSON_RESPONSE<<EOF' >> $GITHUB_ENV
-          curl https://httpbin.org/json >> $GITHUB_ENV
-          echo 'EOF' >> $GITHUB_ENV
-    
-      - name: Set Env 2
-        run: |
-          echo 'GIT_STATUS<<EOF' >> $GITHUB_ENV
-          git status > status.txt
-          cat status.txt >> $GITHUB_ENV
-          echo 'EOF' >> $GITHUB_ENV
-      
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: status
-          path: status.txt status.txt
+      - name: Branch name
+        run: echo running on branch ${GITHUB_REF##*/}
+
 
 
