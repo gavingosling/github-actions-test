@@ -25,7 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - name: Branch name
-        run: echo running on branch ${GITHUB_REF##*/}
+        run: |
+          STR=branch-${GITHUB_REF##*/}
+          echo 'BRANCH=$(STR)' >> $GITHUB_ENV
+      - name: a
+        run: echo a
 
 
 
