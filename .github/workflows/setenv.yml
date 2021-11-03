@@ -16,26 +16,17 @@ jobs:
     # Checkout code
     - name: Checkout
       uses: actions/checkout@v2
-    
-    # Install Gcloud
+  
     - name: Configure Gcloud
       uses: google-github-actions/setup-gcloud@master
       with:
+        version: '290.0.1'
         project_id: ${{ secrets.GCP_PROJECT_ID }}
-
-    # Configure Workload Identity Federation via a credentials file.
-    - id: 'auth'
-      name: 'Authenticate to Google Cloud'
-      uses: 'google-github-actions/auth@v0.3.1'
-      with:
-        create_credentials_file: 'true'
-        workload_identity_provider: ${{ secrets.WORKLOAD_IDENTITY }}
-        service_account: ${{ secrets.SERVICE_ACCOUNT }}
+        service_account_key: ${{ secrets.GCP_SA_KEY }}
+        export_default_credentials: true
         
     - run: |
-        gcloud auth login --brief --cred-file="${{ steps.auth.outputs.credentials_file_path }}"
-        gcloud info
-    #    gcloud auth configure-docker
-    #    docker pull busybox
-    #    docker tag busybox gcr.io/${{ secrets.GCP_PROJECT_ID}}/test/busybox
-    #    docker push gcr.io/${{ secrets.GCP_PROJECT_ID}}/test/busybox
+        gcloud auth configure-docker
+        docker pull busybox
+        docker tag busybox gcr.io/${{ secrets.GCP_PROJECT_ID}}/test/busybox
+        docker push gcr.io/${{ secrets.GCP_PROJECT_ID}}/test/busybox
