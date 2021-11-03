@@ -34,7 +34,8 @@ jobs:
         
     - run: |
         gcloud auth login --brief --cred-file="${{ steps.auth.outputs.credentials_file_path }}"
-        gcloud auth configure-docker
-        docker pull busybox
-        docker tag busybox gcr.io/${{ secrets.GCP_PROJECT_ID}}/test/busybox
-        docker push gcr.io/${{ secrets.GCP_PROJECT_ID}}/test/busybox
+        gcloud info
+    #    gcloud auth configure-docker
+    #    docker pull busybox
+    #    docker tag busybox gcr.io/${{ secrets.GCP_PROJECT_ID}}/test/busybox
+    #    docker push gcr.io/${{ secrets.GCP_PROJECT_ID}}/test/busybox
