@@ -1,24 +1,34 @@
 
-
-name: envtest
+name: push-to-gcp
 
 on:
-  workflow_dispatch:
   repository_dispatch:
     types: [start-workflow]
-
+    
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v2
-      - name: Branch name
-        run: |
-          STR="BRANCH=branch-${GITHUB_REF##*/}"
-          echo $STR >> $GITHUB_ENV
-      - name: a
-        run: echo a
+    # Checkout code
+    - name: Checkout
+      uses: actions/checkout@v2
+    
+    # Install Gcloud
+    - name: Configure Gcloud
+      uses: google-github-actions/setup-gcloud@master
+      with:
+        project_id: ${{ secrets.GCP_PROJECT_ID }}
 
-
-
+    # Configure Workload Identity Federation via a credentials file.
+    - id: 'auth'
+      name: 'Authenticate to Google Cloud'
+      uses: 'google-github-actions/auth@v0.3.1'
+      with:
+        create_credentials_file: 'true'
+        workload_identity_provider: ${{ secrets.WORKLOAD_IDENTITY }}
+        service_account: ${{ secrets.SERVICE_ACCOUNT }}
+        
+    - run: |
+        docker pull busybox
+        docker tag busybox gcr.io/${{ secrets.GCP_PROJECT_ID}}/test/busybox
+        docker push gcr.io/${{ secrets.GCP_PROJECT_ID}}/test/busybox
