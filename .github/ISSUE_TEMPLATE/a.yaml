@@ -7,38 +7,39 @@ body:
     attributes:
       label: What is the issue?
       description: Please describe the issue below.
-      value: "Please delete everything below before creating the issue.
-              An issue header should include three things: A [type], a [context], and a [Title].
-
+      value: "Please delete everything below before creating the issue.\n
+              An issue header should include three things: A [type], a [context], and a [Title].\n
+              \n
               Examples: 
               ENH: [imports,api] Add product advice recommendations\n
-              PERF: [db] Partition tables for product endpoints by `country`
-              BLD: [ci,repo] Add scans for docker image by using Prisma
-
-              Type:
-              ENH: Enhancement, new functionality
-              BUG: Bug fix
-              DOC: Additions/updates to documentation
-              TST: Additions/updates to tests
-              BLD: Updates to the build process/scripts
-              PERF: Performance improvement
-              TYP: Type annotations
-              CLN: Code cleanup
-
-              Context:
-              db: Database 
-              cache: Cache 
-              imports: Data imports/cronjobs 
-              helm: Helm chart
-              docs: Documentation
-              ci: Continous Integration, Github Actions
-              testing: Testing
-              api: Endpoints
-              utils: Utilities 
-              monitoring: Monitoring
-              repo: Repository or github related 
-              gcp: Anything related to GCP
-              misc: Anything that doesnt fit what is above"
+              PERF: [db] Partition tables for product endpoints by `country`\n
+              BLD: [ci,repo] Add scans for docker image by using Prisma\n
+              \n
+              Type:\n
+              ENH: Enhancement, new functionality\n
+              BUG: Bug fix\n
+              DOC: Additions/updates to documentation\n
+              TST: Additions/updates to tests\n
+              BLD: Updates to the build process/scripts\n
+              PERF: Performance improvement\n
+              TYP: Type annotations\n
+              CLN: Code cleanup\n
+              \n
+              Context:\n
+              db: Database\n 
+              cache: Cache\n
+              imports: Data imports/cronjobs\n 
+              helm: Helm chart\n
+              docs: Documentation\n
+              ci: Continous Integration, Github Actions\n
+              testing: Testing\n
+              api: Endpoints\n
+              utils: Utilities\n
+              monitoring: Monitoring\n
+              repo: Repository or github related\n
+              gcp: Anything related to GCP\n
+              misc: Anything that doesnt fit what is above\n
+              "
 
 
   
