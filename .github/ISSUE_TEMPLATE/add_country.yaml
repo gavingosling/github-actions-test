@@ -1,4 +1,4 @@
-name: add_country
+name: Add Country
 description: For describing country additions and updates.
 title: "Country: Add/Update countries [country-list]"
 body:

@@ -1,4 +1,4 @@
-name: Generic
+name: Add Endpoint
 description: Generic Template for issue
 title: "Endpoint: Add/Update endpoint for [endpoint-name] "
 body:

@@ -1,0 +1,29 @@
+name: Generic
+description: For describing endpoint additions and updates.
+title: "[Type]: [Title]"
+body:
+  - type: textarea
+    id: issue-desc
+    attributes:
+      label: What issue is being fixed?
+      value: "Closes issue #XXXX"
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      options:
+        - label: >
+            Validated on development.
+          required: true
+        - label: >
+            Update DOCKER_CHANGELOG
+          required: true
+        - label: >
+            Update DOCKER_VERSION We follow the versioning [here](https://semver.org)
+          required: true
+        - label: >
+            Update Documentation where needed.
+          required: true
+
+
+  
