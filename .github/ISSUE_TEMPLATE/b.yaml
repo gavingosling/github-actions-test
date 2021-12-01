@@ -1,3 +1,9 @@
 name: A
 description: A
 title: "[A]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+        
