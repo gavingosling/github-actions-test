@@ -1,17 +1,44 @@
-name: Bug Report
-description: File a bug report
-title: "[Bug]: "
-labels: ["bug", "triage"]
+name: Generic
+description: Generic Template for issue
+title: "[Type]: [Title] "
 body:
-  - type: markdown
+  - type: textarea
+    id: issue-desc
     attributes:
-      value: |
-        aaaa
-  - type: input
-    id: contact
-    attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
+      label: What is the issue?
+      description: Please describe the issue below.
+      value: "Please delete everything below before creating the issue.
+              An issue header should include three things: A [type], a [context], and a [Title].
+
+              Examples: 
+              ENH: [imports,api] Add product advice recommendations
+              PERF: [db] Partition tables for product endpoints by `country`
+              BLD: [ci,repo] Add scans for docker image by using Prisma
+
+              Type:
+              ENH: Enhancement, new functionality
+              BUG: Bug fix
+              DOC: Additions/updates to documentation
+              TST: Additions/updates to tests
+              BLD: Updates to the build process/scripts
+              PERF: Performance improvement
+              TYP: Type annotations
+              CLN: Code cleanup
+
+              Context:
+              db: Database 
+              cache: Cache 
+              imports: Data imports/cronjobs 
+              helm: Helm chart
+              docs: Documentation
+              ci: Continous Integration, Github Actions
+              testing: Testing
+              api: Endpoints
+              utils: Utilities 
+              monitoring: Monitoring
+              repo: Repository or github related 
+              gcp: Anything related to GCP
+              misc: Anything that doesnt fit what is above"
+
+
+  
