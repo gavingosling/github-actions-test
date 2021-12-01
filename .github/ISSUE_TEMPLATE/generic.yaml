@@ -1,4 +1,4 @@
-name: add_endpoint
+name: Generic
 description: For describing endpoint additions and updates.
 title: "[Type]: [Title]"
 body:
