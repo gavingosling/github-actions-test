@@ -1,0 +1,44 @@
+name: Generic
+description: Generic Template for issue
+title: "Endpoint: Add/Update endpoint for [endpoint-name] "
+body:
+  - type: textarea
+    id: issue-desc
+    attributes:
+      label: What is the issue?
+      description: Please describe the issue below.
+      value: "Title should follow `generic.yaml`'s format.\n
+              \n
+              ----------------------------------------------------------------\n
+              Example:\n
+\n
+              Name: product_advice\n
+\n
+              S3 Tables: \n
+              - Dkt_canada/Personalization/france/emails/output/product_advice/product_advice_\n
+              - Dkt_canada/Personalization/france/emails/output/advice_for_products/advice_for_products_\n
+\n
+              Countries: \n
+              - France\n
+              - Belgium\n
+\n
+              Models:\n
+              - ProductAdvice:\n
+                  - mdl_num_model_r3: int\n
+                  - cnt_code: str\n
+                  - advice_ids_list: array[int]\n
+                  - language: str\n
+\n
+              - AdviceFeatures\n
+                  - cnt_code: str\n
+                  - advice_id: int\n
+                  - locale: str\n
+                  - title: str\n
+                  - summary: str \n
+                  - url: str\n
+                  - meta_description: str\n
+                  - img_url: str\n
+              "
+
+
+  

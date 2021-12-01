@@ -1,6 +1,6 @@
-name: Generic
-description: Generic Template for issue
-title: "[Type]: [Title] "
+name: add_endpoint
+description: For describing endpoint additions and updates.
+title: "[Type]: [Title]"
 body:
   - type: textarea
     id: issue-desc
