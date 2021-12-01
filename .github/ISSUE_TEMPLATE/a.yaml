@@ -11,7 +11,7 @@ body:
               An issue header should include three things: A [type], a [context], and a [Title].
 
               Examples: 
-              ENH: [imports,api] Add product advice recommendations
+              ENH: [imports,api] Add product advice recommendations\n
               PERF: [db] Partition tables for product endpoints by `country`
               BLD: [ci,repo] Add scans for docker image by using Prisma
 
