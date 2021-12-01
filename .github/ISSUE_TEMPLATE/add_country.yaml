@@ -1,0 +1,19 @@
+name: add_country
+description: For describing country additions and updates.
+title: "Country: Add/Update countries [country-list]"
+body:
+  - type: textarea
+    id: issue-desc
+    attributes:
+      label: What is the issue?
+      description: Please describe the issue below.
+      value: "Title should follow `generic.md`'s format.\n
+              -------------------------------\n
+              EXAMPLE: \n
+              Countries:\n
+              - Canada: Add `suggested_products`, `similar_items`\n
+              - Belgium: Remove `suggested_products`, `similar_items`\n
+              "
+
+
+  
