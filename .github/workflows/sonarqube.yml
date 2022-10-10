@@ -5,7 +5,7 @@ jobs:
     name: SonarQube Trigger
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v3.1.0
     - name: SonarQube Scan
       uses: kitabisa/sonarqube-action@v1.1.0
       with:
